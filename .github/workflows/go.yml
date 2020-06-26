@@ -22,9 +22,6 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Build and push Docker images
-      uses: docker/build-push-action@v1.1.0
-
     - name: Build
       run: docker run --rm -i -w /app -v $(pwd):/app -e ANDROID_HOME=/usr/local/android_sdk -e GOPROXY=direct lucor/fyne-cross:android-latest /app/build.sh
       
