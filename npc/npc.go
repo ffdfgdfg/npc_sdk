@@ -1,8 +1,6 @@
 package npc
 
 import (
-	"ehang.io/nps/client"
-	"ehang.io/nps/lib/version"
 	"fmt"
 )
 
@@ -10,13 +8,14 @@ import (
 
 //StartClientByVerifyKey
 func StartClientByVerifyKey(serverAddr, verifyKey, connType, proxyUrl string) {
-	cl := client.NewRPClient(serverAddr, verifyKey, connType, proxyUrl, nil, 60)
-	cl.Start()
+// 	cl := client.NewRPClient(serverAddr, verifyKey, connType, proxyUrl, nil, 60)
+// 	cl.Start()
 }
 
 //GetClientStatus
 func GetClientStatus() int {
-	return client.NowStatus
+// 	return client.NowStatus
+	return 0
 }
 
 //CloseClient
@@ -28,7 +27,8 @@ func GetClientStatus() int {
 
 //Version
 func Version() string {
-	return version.VERSION
+// 	return version.VERSION
+	return "test"
 }
 
 //Logs
